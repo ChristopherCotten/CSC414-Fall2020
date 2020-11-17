@@ -1,0 +1,131 @@
+/*
+Programmer: Christopher Cotten
+Program: Stubbing Program
+Date: 11-17-2020
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int intMenuChoice = 99;
+
+    do
+    {   // - Begin Do-While Loop
+
+        // - While Loop - Loop until number is between 1 and 11
+        while (intMenuChoice < 1 || intMenuChoice > 11)
+        {   // - Being While Loop
+
+            // - Console Output - User Information - Menu Choices
+            cout << "1 - " << endl
+                << "2 - " << endl
+                << "3 - " << endl
+                << "4 - " << endl
+                << "5 - " << endl
+                << "6 - " << endl
+                << "7 - " << endl
+                << "8 - " << endl
+                << "9 - " << endl
+                << "10 - " << endl
+                << "11 - Exit Menu" << endl << endl;
+
+            // - Console Output - User Information
+            cout << endl;
+            cout << "Enter the number (1-11) assoicated with option wanted" << endl;
+            cout << "Choice: ";
+            cin >> intMenuChoice;
+
+            // - Error Checking - Check if number and between 1 or 11
+            if (cin.fail() || intMenuChoice < 1 || intMenuChoice > 11)
+            {
+                // - Clear cin and buffer
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                // - Console Output - User Information
+                cout << endl << endl;
+                cout << "-----Error-----";
+                cout << endl << "Choice is not in the list yet or is illegal";
+                cout << endl << endl;
+            }
+        }   // - End While Loop
+
+        // - Menu Execution
+        switch (intMenuChoice)
+            {   // - Being Switch Statement
+            case 1:
+                cout << endl;
+                cout << "Command 1 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 2:
+                cout << endl;
+                cout << "Command 2 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 3:
+                cout << endl;
+                cout << "Command 3 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 4:
+                cout << endl;
+                cout << "Command 4 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 5:
+                cout << endl;
+                cout << "Command 5 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 6:
+                cout << endl;
+                cout << "Command 6 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 7:
+                cout << endl;
+                cout << "Command 7 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 8:
+                cout << endl;
+                cout << "Command 8 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 9:
+                cout << endl;
+                cout << "Command 9 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 10:
+                cout << endl;
+                cout << "Command 10 not implemented";
+                cout << endl << endl;
+                intMenuChoice = 99;
+                break;
+            case 11:
+                cout << endl;
+                cout << "Exiting Menu";
+                cout << endl << endl;
+                break;
+            }   // - End Switch Statement
+        
+        // - End Do-While Loop
+        } while (intMenuChoice != 11);
+
+        // - Console Output - User Readability
+        cout << endl << endl;
+    }
