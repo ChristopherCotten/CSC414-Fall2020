@@ -135,9 +135,9 @@ int main()
 
 void menuChoice1()
 {
-    int int1 = 0;
-    int int2 = 0;
-    int sum1 = 0;
+    float int1 = 0;
+    float int2 = 0;
+    float sum1 = 0;
     cout << "1 - Addition" << endl;
     cout << "Enter a number" << endl;
     cout << "Number: ";
@@ -156,9 +156,9 @@ void menuChoice1()
 
 void menuChoice2()
 {
-    int int1 = 0;
-    int int2 = 0;
-    int sum1 = 0;
+    float int1 = 0;
+    float int2 = 0;
+    float sum1 = 0;
 
     cout << "2 - Subtraction" << endl;
     cout << "Enter a number" << endl;
@@ -178,9 +178,9 @@ void menuChoice2()
 
 void menuChoice3()
 {
-    int int1 = 0;
-    int int2 = 0;
-    int sum1 = 0;
+    float int1 = 0;
+    float int2 = 0;
+    float sum1 = 0;
 
     
     cout << "3 - Multiplication" << endl;
@@ -201,9 +201,9 @@ void menuChoice3()
 
 void menuChoice4()
 {
-    int int1 = 0;
-    int int2 = 0;
-    int sum1 = 0;
+    float int1 = 0;
+    float int2 = 0;
+    float sum1 = 0;
 
     cout << "4 - Division" << endl;
     cout << "Enter a number" << endl;
