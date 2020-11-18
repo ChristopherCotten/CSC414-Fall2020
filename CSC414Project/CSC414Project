@@ -1,0 +1,344 @@
+/*
+Programmer: Christopher Cotten
+Program: CSC414Project
+Date: 11-17-2020
+*/
+
+#include <iostream>
+
+
+void menuChoice1();
+void menuChoice2();
+void menuChoice3();
+void menuChoice4();
+void menuChoice5();
+void menuChoice6();
+void menuChoice7();
+void menuChoice8();
+void menuChoice9();
+void menuChoice10();
+using namespace std;
+
+int main()
+{
+    int intMenuChoice = 99;
+
+    do
+    {   // - Begin Do-While Loop
+
+        // - While Loop - Loop until number is between 1 and 11
+        while (intMenuChoice < 1 || intMenuChoice > 11)
+        {   // - Being While Loop
+
+            // - Console Output - User Information - Menu Choices
+            cout << "1 - Addition" << endl
+                << "2 - Subtraction" << endl
+                << "3 - Multiplication" << endl
+                << "4 - Division" << endl
+                << "5 - Odd or Even" << endl
+                << "6 - Positive or Negative" << endl
+                << "7 - Prime" << endl
+                << "8 - Factors" << endl
+                << "9 - Factorial" << endl
+                << "10 - " << endl
+                << "11 - Exit Menu" << endl << endl;
+
+            // - Console Output - User Information
+            cout << endl;
+            cout << "Enter the number (1-11) assoicated with option wanted" << endl;
+            cout << "Choice: ";
+            cin >> intMenuChoice;
+
+            // - Error Checking - Check if number and between 1 or 11
+            if (cin.fail() || intMenuChoice < 1 || intMenuChoice > 11)
+            {
+                // - Clear cin and buffer
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                // - Console Output - User Information
+                cout << endl << endl;
+                cout << "-----Error-----";
+                cout << endl << "Choice is not in the list yet or is illegal";
+                cout << endl << endl;
+            }
+        }   // - End While Loop
+
+        // - Menu Execution
+        switch (intMenuChoice)
+        {   // - Being Switch Statement
+        case 1:
+            cout << endl;
+            menuChoice1();
+            intMenuChoice = 99;
+            break;
+        case 2:
+            cout << endl;
+            menuChoice2();
+            intMenuChoice = 99;
+            break;
+        case 3:
+            cout << endl;
+            menuChoice3();
+            intMenuChoice = 99;
+            break;
+        case 4:
+            cout << endl;
+            menuChoice4();
+            intMenuChoice = 99;
+            break;
+        case 5:
+            cout << endl;
+            menuChoice5();
+            intMenuChoice = 99;
+            break;
+        case 6:
+            cout << endl;
+            menuChoice6();
+            intMenuChoice = 99;
+            break;
+        case 7:
+            cout << endl;
+            menuChoice7();
+            intMenuChoice = 99;
+            break;
+        case 8:
+            cout << endl;
+            menuChoice8();
+            intMenuChoice = 99;
+            break;
+        case 9:
+            cout << endl;
+            menuChoice9();
+            intMenuChoice = 99;
+            break;
+        case 10:
+            cout << endl;
+            cout << "Command 10 not implemented";
+            cout << endl << endl;
+            intMenuChoice = 99;
+            break;
+        case 11:
+            cout << endl;
+            cout << "Exiting Menu";
+            cout << endl << endl;
+            break;
+        }   // - End Switch Statement
+
+    // - End Do-While Loop
+    } while (intMenuChoice != 11);
+
+    // - Console Output - User Readability
+    cout << endl << endl;
+}
+
+
+void menuChoice1()
+{
+    int int1 = 0;
+    int int2 = 0;
+    int sum1 = 0;
+    cout << "1 - Addition" << endl;
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int1;
+    
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int2;
+
+    sum1 = int1 + int2;
+
+    cout << endl;
+    cout << "Resulting Addition is: " << sum1;
+    cout << endl << endl;
+}
+
+void menuChoice2()
+{
+    int int1 = 0;
+    int int2 = 0;
+    int sum1 = 0;
+
+    cout << "2 - Subtraction" << endl;
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int1;
+
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int2;
+
+    sum1 = int1 - int2;
+
+    cout << endl;
+    cout << "Resulting Subtraction is: " << sum1;
+    cout << endl << endl;
+}
+
+void menuChoice3()
+{
+    int int1 = 0;
+    int int2 = 0;
+    int sum1 = 0;
+
+    
+    cout << "3 - Multiplication" << endl;
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int1;
+
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int2;
+
+    sum1 = int1 * int2;
+
+    cout << endl;
+    cout << "Resulting Multiplcation is: " << sum1;
+    cout << endl << endl;
+}
+
+void menuChoice4()
+{
+    int int1 = 0;
+    int int2 = 0;
+    int sum1 = 0;
+
+    cout << "4 - Division" << endl;
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int1;
+
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int2;
+
+    sum1 = int1 / int2;
+
+    cout << endl;
+    cout << "Resulting Division is: " << sum1;
+    cout << endl << endl;
+}
+
+void menuChoice5()
+{
+    int int1 = 0;
+
+    cout << "5 - Odd or Even" << endl;
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int1;
+
+    if (int1 % 2 == 0)
+    {
+        cout << int1 << " is even";
+    }
+    else
+    {
+        cout << int1 << " is odd";
+    }
+
+    cout << endl << endl;
+}
+
+void menuChoice6()
+{
+    int int1 = 0;
+
+    cout << "6 - Positive or Negative" << endl;
+    cout << "Enter a number" << endl;
+    cout << "Number: ";
+    cin >> int1;
+
+    if (int1 > 0)
+    {
+        cout << int1 << " is Postive";
+    }
+    else if (int1 < 0)
+    {
+        cout << int1 << " is Negative";
+    }
+    else
+    {
+        cout << int1 << " is Zero";
+    }
+
+    cout << endl << endl;
+}
+
+void menuChoice7()
+{
+    int int1 = 0;
+    int int2 = 0;
+    int i = 0;
+    int flag = 0;
+
+    cout << "7 - Prime" << endl;
+    cout << "Enter a positive number: ";
+    cin >> int1;
+
+    int2 = int1 / 2;
+
+    for (i = 2; i < int2; i++)
+    {
+        if (int1 % i == 0)
+        {
+            cout << int1 << " is not a Prime number";
+            cout << endl << endl;
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag == 0)
+    {
+        cout << int1 << " is Prime";
+        cout << endl << endl;
+    }
+}
+
+void menuChoice8()
+{
+    int int1 = 0;
+
+    cout << "8 - Factors" << endl;
+    cout << "Enter a positive number: ";
+    cin >> int1;
+
+    cout << "Factors of " << int1 << " are: ";
+    cout << endl;
+    for (int i = 1; i <= int1; ++i)
+    {
+        if (int1 % i == 0)
+            cout << i << ", ";
+            
+    }
+
+    cout << endl << endl;
+}
+
+void menuChoice9()
+{
+    int int1 = 0;
+    int int2 = 1;
+
+    cout << "9 - Factorial" << endl;
+    cout << "Enter a number: ";
+    cin >> int1;
+
+    cout << "The Factorial of " << int1 << " is: ";
+
+    for (int i = 1; i <= int1; i++)
+    {
+        int2 = int2 * i;
+    }
+
+    cout << int2;
+    cout << endl << endl;
+}
+
+void menuChoice10()
+{
+
+}
